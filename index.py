@@ -19,15 +19,17 @@ class Mpesa:
         self.balance+=self.amount
         print(f"Your Current Balance is {self.balance}")
        
-    # def withdraw(self, amount):
-    #     self.amount=amount
-      
-    #     amount=amount-self.balance
-    # def check_balance(self):
-    #     print(f"Your Current Balance is {self.balance}")
+    def withdraw(self):
+       
+        self.amount=int(input("Enter Amount To Be Withdrawn "))
+        self.balance-=self.amount
+        print(f"Your Current Balance is {self.balance} after withdrawal of {self.amount}")
+    def check_balance(self):
+        print(f"Your Current Balance is {self.balance}")
 
 felex=Mpesa()
 felex.depoist()
+felex.withdraw()
 
 # emma =Mpesa()
 # emma.check_balance()
